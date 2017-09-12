@@ -35,6 +35,17 @@ class BabyViewController: UIViewController,UICollectionViewDataSource,UICollecti
         self.performSegue(withIdentifier: "BabyVC", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "BabyVC"
+        {
+            let indexPaths = self.CollectionView.indexPathsForSelectedItems
+            let indexPath = indexPaths?[0] as! IndexPath
+            let vc = segue.destination as! ShowImageViewController
+            vc.img = UIImage(named: self.arr[indexPath.row])
+        }
+    }
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()

@@ -26,6 +26,7 @@
 		4C35DBE61F582D2A00C09958 /* ShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35DBE51F582D2A00C09958 /* ShipViewController.swift */; };
 		4C35DBE81F582D4000C09958 /* RingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35DBE71F582D4000C09958 /* RingViewController.swift */; };
 		4C35DBEA1F582D5400C09958 /* RangoliViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35DBE91F582D5400C09958 /* RangoliViewController.swift */; };
+		4CEDAB8A1F594335001A81F7 /* MyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEDAB891F594335001A81F7 /* MyTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		4C35DBE51F582D2A00C09958 /* ShipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipViewController.swift; sourceTree = "<group>"; };
 		4C35DBE71F582D4000C09958 /* RingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingViewController.swift; sourceTree = "<group>"; };
 		4C35DBE91F582D5400C09958 /* RangoliViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangoliViewController.swift; sourceTree = "<group>"; };
+		4CEDAB891F594335001A81F7 /* MyTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				4C35DBD71F581F8400C09958 /* GoodNightViewController.swift */,
 				4C35DBD51F5819E200C09958 /* GoodmorningViewController.swift */,
 				4C35DBA71F58105900C09958 /* ViewController.swift */,
+				4CEDAB891F594335001A81F7 /* MyTableCell.swift */,
 				4C35DBD31F5813CD00C09958 /* MyCell.swift */,
 				4C35DBD91F5826DA00C09958 /* ShowImageViewController.swift */,
 				4C35DBAC1F58105900C09958 /* Assets.xcassets */,
@@ -303,6 +306,7 @@
 				4C35DBEA1F582D5400C09958 /* RangoliViewController.swift in Sources */,
 				4C35DBD41F5813CD00C09958 /* MyCell.swift in Sources */,
 				4C35DBE21F582CDE00C09958 /* CarViewController.swift in Sources */,
+				4CEDAB8A1F594335001A81F7 /* MyTableCell.swift in Sources */,
 				4C35DBE61F582D2A00C09958 /* ShipViewController.swift in Sources */,
 				4C35DBDE1F582CA600C09958 /* CoupleViewController.swift in Sources */,
 				4C35DBA81F58105900C09958 /* ViewController.swift in Sources */,
@@ -555,6 +559,7 @@
 				4C35DBCC1F58105900C09958 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C35DBCD1F58105900C09958 /* Build configuration list for PBXNativeTarget "GalleryTests" */ = {
 			isa = XCConfigurationList;
@@ -563,6 +568,7 @@
 				4C35DBCF1F58105900C09958 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C35DBD01F58105900C09958 /* Build configuration list for PBXNativeTarget "GalleryUITests" */ = {
 			isa = XCConfigurationList;
@@ -571,6 +577,7 @@
 				4C35DBD21F58105900C09958 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

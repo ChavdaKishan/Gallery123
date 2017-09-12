@@ -35,6 +35,17 @@ class GodViewController: UIViewController,UICollectionViewDataSource,UICollectio
         self.performSegue(withIdentifier: "GodVC", sender: self)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "GodVC"
+        {
+            let indexPaths = self.CollectionView.indexPathsForSelectedItems
+            let indexPath = indexPaths?[0] as! IndexPath
+            let vc = segue.destination as! ShowImageViewController
+            vc.img = UIImage(named: self.arr[indexPath.row])
+        }
+    }
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()

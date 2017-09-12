@@ -11,7 +11,7 @@ import UIKit
 class RingViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate
 {
     @IBOutlet weak var CollectionView: UICollectionView!
-    var arr : [String] = ["9",""]
+    var arr : [String] = ["9","251","252","253","254","255","256","257","258","259","260","261","262","263","264","265","266","267","268","269","270","271","272","273","274","275","276","277","278","279","280"]
     
     override func viewDidLoad()
     {
@@ -33,6 +33,17 @@ class RingViewController: UIViewController,UICollectionViewDataSource,UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         self.performSegue(withIdentifier: "RingVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "RingVC"
+        {
+            let indexPaths = self.CollectionView.indexPathsForSelectedItems
+            let indexPath = indexPaths?[0] as! IndexPath
+            let vc = segue.destination as! ShowImageViewController
+            vc.img = UIImage(named: self.arr[indexPath.row])
+        }
     }
     
     override func didReceiveMemoryWarning()

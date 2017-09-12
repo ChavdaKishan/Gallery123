@@ -11,7 +11,7 @@ import UIKit
 class RangoliViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate
 {
     @IBOutlet weak var CollectionView: UICollectionView!
-    var arr : [String] = ["10",""]
+    var arr : [String] = ["10","281","282","283","284","285","286","287","288","289","290","291","292","293","294","295","296","297","298","299","300"]
     
     override func viewDidLoad()
     {
@@ -33,6 +33,17 @@ class RangoliViewController: UIViewController,UICollectionViewDataSource,UIColle
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         self.performSegue(withIdentifier: "RangoliVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "RangoliVC"
+        {
+            let indexPaths = self.CollectionView.indexPathsForSelectedItems
+            let indexPath = indexPaths?[0] as! IndexPath
+            let vc = segue.destination as! ShowImageViewController
+            vc.img = UIImage(named: self.arr[indexPath.row])
+        }
     }
     
     override func didReceiveMemoryWarning()

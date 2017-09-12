@@ -41,16 +41,16 @@ class GoodmorningViewController: UIViewController,UICollectionViewDelegate,UICol
         // Dispose of any resources that can be recreated.
     }
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if segue.identifier == "GMVC"
+        if segue.identifier == "MorningVC"
         {
             let indexPaths = self.CollectinView.indexPathsForSelectedItems
             let indexPath = indexPaths?[0] as! IndexPath
-            let vc = segue.destination as! GoodmorningViewController
-            vc.img = UIImage(named: self.arr[indexPath.row])
+            let vc = segue.destination as! ShowImageViewController
+            vc.img = UIImage(named: self.arr1[indexPath.row])
         }
-    }*/
+    }
     
     /*
     // MARK: - Navigation

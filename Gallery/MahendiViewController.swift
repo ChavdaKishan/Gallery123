@@ -11,7 +11,7 @@ import UIKit
 class MahendiViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate
 {
     @IBOutlet weak var CollectionView: UICollectionView!
-    var arr : [String] = ["7",""]
+    var arr : [String] = ["7","221","222","223","224","225","226","227","228","229","230","231","232","233","234","235","236","237","238","239","240","241","242","243","244","245","246","247","248","249","250"]
     
     override func viewDidLoad()
     {
@@ -33,6 +33,17 @@ class MahendiViewController: UIViewController,UICollectionViewDataSource,UIColle
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         self.performSegue(withIdentifier: "MahendiVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "MahendiVC"
+        {
+            let indexPaths = self.CollectionView.indexPathsForSelectedItems
+            let indexPath = indexPaths?[0] as! IndexPath
+            let vc = segue.destination as! ShowImageViewController
+            vc.img = UIImage(named: self.arr[indexPath.row])
+        }
     }
     
     override func didReceiveMemoryWarning()

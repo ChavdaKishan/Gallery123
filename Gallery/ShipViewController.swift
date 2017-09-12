@@ -11,7 +11,7 @@ import UIKit
 class ShipViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate
 {
     @IBOutlet weak var CollectionView: UICollectionView!
-    var arr : [String] = ["8",""]
+    var arr : [String] = ["8","191","192","193","194","195","196","197","198","199","200","201","202","203","204","205","206","207","208","209","210","211","212","213","214","215","216","217","218","219","220"]
     
     override func viewDidLoad()
     {
@@ -33,6 +33,17 @@ class ShipViewController: UIViewController,UICollectionViewDataSource,UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         self.performSegue(withIdentifier: "ShipVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "ShipVC"
+        {
+            let indexPaths = self.CollectionView.indexPathsForSelectedItems
+            let indexPath = indexPaths?[0] as! IndexPath
+            let vc = segue.destination as! ShowImageViewController
+            vc.img = UIImage(named: self.arr[indexPath.row])
+        }
     }
     
     override func didReceiveMemoryWarning()
