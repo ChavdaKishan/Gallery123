@@ -21,11 +21,10 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        if self.revealViewController() != nil
-        {
+        if self.revealViewController() != nil {
             MenuClick.target = self.revealViewController()
             MenuClick.action = Selector("revealToggle:")
-            self.view.gestureRecognizers(self.revealViewController().panGestureRecognizer())
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
     }
     
