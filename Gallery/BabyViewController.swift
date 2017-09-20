@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BabyViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate
+class BabyViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout
 {
     @IBOutlet weak var CollectionView: UICollectionView!
     var arr : [String] = ["5","131","132","133","134","135","136","137","138","139","140","141","142","143","144","145","146","147","148","149","150","151","152","153","154","155","156","157","158","159","160"]
@@ -33,6 +33,10 @@ class BabyViewController: UIViewController,UICollectionViewDataSource,UICollecti
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         self.performSegue(withIdentifier: "BabyVC", sender: self)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        return CGSize(width: (UIScreen.main.bounds.width-20)/3, height: (UIScreen.main.bounds.width-10)/3)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

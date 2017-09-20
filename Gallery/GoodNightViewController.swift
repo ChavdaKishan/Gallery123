@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GoodNightViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate
+class GoodNightViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout
 {
     @IBOutlet weak var CollectionView: UICollectionView!
     var arr : [String] = ["2","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70"]
@@ -33,6 +33,10 @@ class GoodNightViewController: UIViewController,UICollectionViewDataSource,UICol
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         self.performSegue(withIdentifier: "NightVC", sender: self)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        return CGSize(width: (UIScreen.main.bounds.width-20)/3, height: (UIScreen.main.bounds.width-10)/3)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

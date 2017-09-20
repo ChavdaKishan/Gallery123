@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GodViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate
+class GodViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout
 {
     @IBOutlet weak var CollectionView: UICollectionView!
     var arr : [String] = ["3","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100"]
@@ -33,6 +33,10 @@ class GodViewController: UIViewController,UICollectionViewDataSource,UICollectio
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         self.performSegue(withIdentifier: "GodVC", sender: self)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        return CGSize(width: (UIScreen.main.bounds.width-20)/3, height: (UIScreen.main.bounds.width-10)/3)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

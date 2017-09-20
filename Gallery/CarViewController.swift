@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CarViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate
+class CarViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout
 {
     @IBOutlet weak var CollectionView: UICollectionView!
     var arr : [String] = ["6","161","162","163","164","165","166","167","168","169","170","171","172","173","174","175","176","177","178","179","180","181","182","183","184","185","186","187","188","189","190"]
@@ -33,6 +33,10 @@ class CarViewController: UIViewController,UICollectionViewDataSource,UICollectio
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         self.performSegue(withIdentifier: "CarVC", sender: self)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        return CGSize(width: (UIScreen.main.bounds.width-20)/3, height: (UIScreen.main.bounds.width-10)/3)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

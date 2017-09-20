@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RangoliViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate
+class RangoliViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout
 {
     @IBOutlet weak var CollectionView: UICollectionView!
     var arr : [String] = ["10","281","282","283","284","285","286","287","288","289","290","291","292","293","294","295","296","297","298","299","300"]
@@ -33,6 +33,10 @@ class RangoliViewController: UIViewController,UICollectionViewDataSource,UIColle
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         self.performSegue(withIdentifier: "RangoliVC", sender: self)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        return CGSize(width: (UIScreen.main.bounds.width-20)/3, height: (UIScreen.main.bounds.width-10)/3)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

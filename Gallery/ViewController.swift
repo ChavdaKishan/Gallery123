@@ -8,28 +8,25 @@
 
 import UIKit
 
-class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UITableViewDataSource,UITableViewDelegate
+class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout
 {
+    @IBOutlet weak var MenuClick: UIBarButtonItem!
     @IBOutlet weak var CollectionView: UICollectionView!
-    @IBOutlet weak var LeftView: UIView!
-    @IBOutlet weak var LeadingConstraints: NSLayoutConstraint!
     
     // MARK: - Collection Variable
     var arr : [String] = ["1","2","3","4","5","6","7","8","9","10"]
     var arr1 : [String] = ["Good Morning","Good Night","God","Couple","Baby","Car","Mahendi","Ship","Ring","Rangoli"]
     
-    // MARK: - Slide Variable
-    var Lmod = false
-    
-    // MARK: - Table Variable
-    var array1 = [UIImage(named:"1")!,UIImage(named:"2")!,UIImage(named:"3")!,UIImage(named:"4")!,UIImage(named:"5")!]
-    var array : [String] = ["Home","Photo","Video","Rate","AboutUs"]
-    
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if self.revealViewController() != nil
+        {
+            MenuClick.target = self.revealViewController()
+            MenuClick.action = Selector("revealToggle:")
+            self.view.gestureRecognizers(self.revealViewController().panGestureRecognizer())
+        }
     }
     
     
@@ -89,69 +86,17 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         }
     }
     
-    // MARK: - Slide View
-    @IBAction func LeftClick(_ sender: Any)
+    
+    // MARK: - UICollectionViewDelegateFlowLayout
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        if (Lmod)
-        {
-            LeadingConstraints.constant = -700
-            animation()
-        }
-        else
-        {
-            LeadingConstraints.constant = 0
-            animation()
-        }
-        Lmod = !Lmod
+        return CGSize(width: (UIScreen.main.bounds.width-10)/2, height: (UIScreen.main.bounds.width-10)/2)
     }
     
-    
-    // MARK: - Table View
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        return array.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-        let cell1 = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MyTableCell
-        cell1.LblTable.text = array[indexPath.row]
-        cell1.ImageTable.image = array1[indexPath.row]
-        return cell1
-    }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
-    {
-        if indexPath.row == 0
-        {
-            performSegue(withIdentifier: "HomeVCTable", sender: self)
-        }
-        else if indexPath.row == 1
-        {
-            performSegue(withIdentifier: "PhotoVCTable", sender: self)
-        }
-        else if indexPath.row == 2
-        {
-            performSegue(withIdentifier: "VideoVCTable", sender: self)
-        }
-        else if indexPath.row == 3
-        {
-            performSegue(withIdentifier: "RateVCTable", sender: self)
-        }
-        else if indexPath.row == 4
-        {
-            performSegue(withIdentifier: "AboutUsVCTable", sender: self)
-        }
-    }
     
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func animation()
-    {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.view.layoutIfNeeded()
-        })
     }
 }

@@ -10,9 +10,7 @@ import UIKit
 
 class ShowImageViewController: UIViewController
 {
-    
     @IBOutlet weak var IMGShow: UIImageView!
-    
     var img : UIImage? = nil
     
     override func viewDidLoad()

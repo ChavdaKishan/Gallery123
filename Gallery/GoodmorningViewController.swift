@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GoodmorningViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource
+class GoodmorningViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 {
     @IBOutlet weak var CollectinView: UICollectionView!
     var arr1 : [String] = ["1","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40"]
@@ -33,6 +33,10 @@ class GoodmorningViewController: UIViewController,UICollectionViewDelegate,UICol
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
         self.performSegue(withIdentifier: "MorningVC", sender: self)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        return CGSize(width: (UIScreen.main.bounds.width-20)/3, height: (UIScreen.main.bounds.width-10)/3)
     }
     
     override func didReceiveMemoryWarning()
