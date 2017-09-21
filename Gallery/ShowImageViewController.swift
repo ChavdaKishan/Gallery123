@@ -25,6 +25,21 @@ class ShowImageViewController: UIViewController
     
     @IBAction func Sharebtnclick(_ sender: Any)
     {
+        let theButton = sender as! UIButton
+        let bound = theButton.bounds
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.2, initialSpringVelocity: 10, options: .curveEaseInOut, animations: {
+            theButton.bounds = CGRect(x: bound.origin.x - 20, y: bound.origin.y, width: bound.size.width + 60, height: bound.size.height)
+        }) { (success: Bool) in
+            if success
+            {
+                UIView.animate(withDuration: 0.5, animations: {
+                    theButton.bounds = bound
+                })
+            }
+        }
+        
+        
+        
         let activityVC = UIActivityViewController(activityItems: [self.IMGShow.image], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
         self.present(activityVC, animated: true, completion: nil)

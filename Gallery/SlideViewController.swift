@@ -16,6 +16,8 @@ class SlideViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     @IBOutlet weak var TitleImg: UIImageView!
     @IBOutlet weak var TableView: UITableView!
     
+    @IBOutlet weak var ImgConstraints: NSLayoutConstraint!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -28,10 +30,24 @@ class SlideViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         TitleImg.layer.cornerRadius = 50
         TitleImg.layer.masksToBounds = false
         TitleImg.clipsToBounds = true
+        
+        ImgConstraints.constant -= view.bounds.width
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         animateTable()
+    }
+    var animation = false
+    override func viewDidAppear(_ animated: Bool)
+    {
+        if !animation
+        {
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+                self.ImgConstraints.constant += self.view.bounds.width
+                self.view.layoutIfNeeded()
+            }, completion: nil)
+            animation = true
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int
