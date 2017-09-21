@@ -27,6 +27,7 @@
 		4C35DBE61F582D2A00C09958 /* ShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35DBE51F582D2A00C09958 /* ShipViewController.swift */; };
 		4C35DBE81F582D4000C09958 /* RingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35DBE71F582D4000C09958 /* RingViewController.swift */; };
 		4C35DBEA1F582D5400C09958 /* RangoliViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35DBE91F582D5400C09958 /* RangoliViewController.swift */; };
+		4CBE7FD71F73A053000AEAE3 /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE7FD61F73A053000AEAE3 /* SlideViewController.swift */; };
 		4CEDAB8A1F594335001A81F7 /* MyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEDAB891F594335001A81F7 /* MyTableCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		4C35DBE51F582D2A00C09958 /* ShipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipViewController.swift; sourceTree = "<group>"; };
 		4C35DBE71F582D4000C09958 /* RingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingViewController.swift; sourceTree = "<group>"; };
 		4C35DBE91F582D5400C09958 /* RangoliViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangoliViewController.swift; sourceTree = "<group>"; };
+		4CBE7FD61F73A053000AEAE3 /* SlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
 		4CEDAB891F594335001A81F7 /* MyTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 				4C18443F1F72774F00E86F26 /* SWRevealViewController.m */,
 				4C1844401F72774F00E86F26 /* sidebarMenuTutorial-Bridging-Header.h */,
 				4C35DBA91F58105900C09958 /* Main.storyboard */,
+				4CBE7FD61F73A053000AEAE3 /* SlideViewController.swift */,
 				4C35DBE91F582D5400C09958 /* RangoliViewController.swift */,
 				4C35DBE71F582D4000C09958 /* RingViewController.swift */,
 				4C35DBE51F582D2A00C09958 /* ShipViewController.swift */,
@@ -321,6 +324,7 @@
 				4C35DBDE1F582CA600C09958 /* CoupleViewController.swift in Sources */,
 				4C1844411F72774F00E86F26 /* SWRevealViewController.m in Sources */,
 				4C35DBA81F58105900C09958 /* ViewController.swift in Sources */,
+				4CBE7FD71F73A053000AEAE3 /* SlideViewController.swift in Sources */,
 				4C35DBE41F582D0700C09958 /* MahendiViewController.swift in Sources */,
 				4C35DBDC1F582C7D00C09958 /* GodViewController.swift in Sources */,
 				4C35DBA61F58105900C09958 /* AppDelegate.swift in Sources */,
