@@ -38,8 +38,6 @@ class ShowImageViewController: UIViewController
             }
         }
         
-        
-        
         let activityVC = UIActivityViewController(activityItems: [self.IMGShow.image], applicationActivities: nil)
         activityVC.popoverPresentationController?.sourceView = self.view
         self.present(activityVC, animated: true, completion: nil)
