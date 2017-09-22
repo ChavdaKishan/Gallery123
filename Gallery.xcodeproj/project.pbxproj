@@ -21,12 +21,12 @@
 		4C35DBDA1F5826DA00C09958 /* ShowImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35DBD91F5826DA00C09958 /* ShowImageViewController.swift */; };
 		4C35DBDC1F582C7D00C09958 /* GodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35DBDB1F582C7D00C09958 /* GodViewController.swift */; };
 		4C35DBDE1F582CA600C09958 /* CoupleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35DBDD1F582CA600C09958 /* CoupleViewController.swift */; };
-		4C35DBE01F582CC500C09958 /* BabyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35DBDF1F582CC500C09958 /* BabyViewController.swift */; };
 		4C35DBE21F582CDE00C09958 /* CarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35DBE11F582CDE00C09958 /* CarViewController.swift */; };
 		4C35DBE41F582D0700C09958 /* MahendiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35DBE31F582D0700C09958 /* MahendiViewController.swift */; };
 		4C35DBE61F582D2A00C09958 /* ShipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35DBE51F582D2A00C09958 /* ShipViewController.swift */; };
 		4C35DBE81F582D4000C09958 /* RingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35DBE71F582D4000C09958 /* RingViewController.swift */; };
 		4C35DBEA1F582D5400C09958 /* RangoliViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C35DBE91F582D5400C09958 /* RangoliViewController.swift */; };
+		4C9A3E0A1F753FE900C85C5A /* BabyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9A3E091F753FE900C85C5A /* BabyViewController.swift */; };
 		4CBE7FD71F73A053000AEAE3 /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CBE7FD61F73A053000AEAE3 /* SlideViewController.swift */; };
 		4CEDAB8A1F594335001A81F7 /* MyTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEDAB891F594335001A81F7 /* MyTableCell.swift */; };
 /* End PBXBuildFile section */
@@ -72,12 +72,12 @@
 		4C35DBD91F5826DA00C09958 /* ShowImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowImageViewController.swift; sourceTree = "<group>"; };
 		4C35DBDB1F582C7D00C09958 /* GodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GodViewController.swift; sourceTree = "<group>"; };
 		4C35DBDD1F582CA600C09958 /* CoupleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoupleViewController.swift; sourceTree = "<group>"; };
-		4C35DBDF1F582CC500C09958 /* BabyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BabyViewController.swift; sourceTree = "<group>"; };
 		4C35DBE11F582CDE00C09958 /* CarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarViewController.swift; sourceTree = "<group>"; };
 		4C35DBE31F582D0700C09958 /* MahendiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MahendiViewController.swift; sourceTree = "<group>"; };
 		4C35DBE51F582D2A00C09958 /* ShipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipViewController.swift; sourceTree = "<group>"; };
 		4C35DBE71F582D4000C09958 /* RingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RingViewController.swift; sourceTree = "<group>"; };
 		4C35DBE91F582D5400C09958 /* RangoliViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangoliViewController.swift; sourceTree = "<group>"; };
+		4C9A3E091F753FE900C85C5A /* BabyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BabyViewController.swift; sourceTree = "<group>"; };
 		4CBE7FD61F73A053000AEAE3 /* SlideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
 		4CEDAB891F594335001A81F7 /* MyTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,7 +141,7 @@
 				4C35DBE51F582D2A00C09958 /* ShipViewController.swift */,
 				4C35DBE31F582D0700C09958 /* MahendiViewController.swift */,
 				4C35DBE11F582CDE00C09958 /* CarViewController.swift */,
-				4C35DBDF1F582CC500C09958 /* BabyViewController.swift */,
+				4C9A3E091F753FE900C85C5A /* BabyViewController.swift */,
 				4C35DBDD1F582CA600C09958 /* CoupleViewController.swift */,
 				4C35DBDB1F582C7D00C09958 /* GodViewController.swift */,
 				4C35DBD71F581F8400C09958 /* GoodNightViewController.swift */,
@@ -314,8 +314,8 @@
 				4C35DBD61F5819E200C09958 /* GoodmorningViewController.swift in Sources */,
 				4C35DBDA1F5826DA00C09958 /* ShowImageViewController.swift in Sources */,
 				4C35DBE81F582D4000C09958 /* RingViewController.swift in Sources */,
+				4C9A3E0A1F753FE900C85C5A /* BabyViewController.swift in Sources */,
 				4C35DBD81F581F8400C09958 /* GoodNightViewController.swift in Sources */,
-				4C35DBE01F582CC500C09958 /* BabyViewController.swift in Sources */,
 				4C35DBEA1F582D5400C09958 /* RangoliViewController.swift in Sources */,
 				4C35DBD41F5813CD00C09958 /* MyCell.swift in Sources */,
 				4C35DBE21F582CDE00C09958 /* CarViewController.swift in Sources */,

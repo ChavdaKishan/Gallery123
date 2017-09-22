@@ -454,7 +454,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="CollectionView" destination="lRs-nz-TL2" id="XVX-eS-4My"/>
+                        <outlet property="CollectionView" destination="lRs-nz-TL2" id="V1r-hs-xKd"/>
                         <segue destination="Pvv-RF-R2o" kind="show" identifier="BabyVC" id="B5O-um-ntS"/>
                     </connections>
                 </viewController>
@@ -907,6 +907,6 @@
         <image name="05" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7ca-ut-abc"/>
+        <segue reference="B5O-um-ntS"/>
     </inferredMetricsTieBreakers>
 </document>

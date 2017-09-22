@@ -2,7 +2,7 @@
 //  BabyViewController.swift
 //  Gallery
 //
-//  Created by iFlame on 8/31/17.
+//  Created by iFlame on 9/22/17.
 //  Copyright © 2017 LCCA. All rights reserved.
 //
 
@@ -11,13 +11,12 @@ import UIKit
 class BabyViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout
 {
     @IBOutlet weak var CollectionView: UICollectionView!
+    
     var arr : [String] = ["5","131","132","133","134","135","136","137","138","139","140","141","142","143","144","145","146","147","148","149","150","151","152","153","154","155","156","157","158","159","160"]
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -50,12 +49,12 @@ class BabyViewController: UIViewController,UICollectionViewDataSource,UICollecti
         }
     }
     
-    override func didReceiveMemoryWarning()
-    {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+
     /*
     // MARK: - Navigation
 
@@ -65,4 +64,5 @@ class BabyViewController: UIViewController,UICollectionViewDataSource,UICollecti
         // Pass the selected object to the new view controller.
     }
     */
+
 }
