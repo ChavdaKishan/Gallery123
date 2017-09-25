@@ -21,7 +21,7 @@ class SlideViewController: UIViewController,UITableViewDelegate,UITableViewDataS
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        arr1 = ["Home","Message","Map","Setting"]
+        arr1 = ["Home","AboutUS","Video","Rate"]
         arr2 = [UIImage(named:"01")!,UIImage(named:"03")!,UIImage(named:"02")!,UIImage(named:"04")!]
         
         TitleImg.layer.borderWidth = 2
@@ -67,9 +67,47 @@ class SlideViewController: UIViewController,UITableViewDelegate,UITableViewDataS
         cell.Lblnm.text = arr1[indexPath.row]
         return cell
     }
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        <#code#>
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
+        // MARK : - Home Slide
+        let revealViewController:SWRevealViewController = self.revealViewController()
+        let cell:MyTableCell = tableView.cellForRow(at: indexPath) as! MyTableCell
+        
+        if cell.Lblnm.text! == "Home"
+        {
+            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let desViewController = mainStoryBoard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+            let newFrontViewController = UINavigationController.init(rootViewController:desViewController)
+            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+        }
+        
+        // MARK : - AboutUS Slide
+        if cell.Lblnm.text! == "AboutUS"
+        {
+            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let desViewController = mainStoryBoard.instantiateViewController(withIdentifier: "AboutUs")
+            let newFrontViewController = UINavigationController.init(rootViewController:desViewController)
+            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+        }
+        
+        // MARK : - AboutUS Slide
+        if cell.Lblnm.text! == "Video"
+        {
+            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let desViewController = mainStoryBoard.instantiateViewController(withIdentifier: "Video")
+            let newFrontViewController = UINavigationController.init(rootViewController:desViewController)
+            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+        }
+        
+        // MARK : - AboutUS Slide
+        if cell.Lblnm.text! == "Rate"
+        {
+            let mainStoryBoard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let desViewController = mainStoryBoard.instantiateViewController(withIdentifier: "Rate")
+            let newFrontViewController = UINavigationController.init(rootViewController:desViewController)
+            revealViewController.pushFrontViewController(newFrontViewController, animated: true)
+        }
+    }
     
     override func didReceiveMemoryWarning()
     {

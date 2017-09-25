@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Gallery" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -98,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="126"/>
+            <point key="canvasLocation" x="1828" y="199"/>
         </scene>
         <!--Goodmorning View Controller-->
         <scene sceneID="Nhw-9g-jrs">
@@ -208,7 +208,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWD-RL-Lbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="1826"/>
+            <point key="canvasLocation" x="1057" y="1716"/>
         </scene>
         <!--Good Night View Controller-->
         <scene sceneID="WY4-Of-g9N">
@@ -858,7 +858,170 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BdR-Ko-u7L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1922" y="-648"/>
+            <point key="canvasLocation" x="1828" y="-589"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ne5-M5-Cxz">
+            <objects>
+                <viewController storyboardIdentifier="AboutUs" id="mVM-nk-0RE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="M1G-ff-3XK"/>
+                        <viewControllerLayoutGuide type="bottom" id="8K0-WZ-4m1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dm1-FY-N3w">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="587-HA-JLy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2622" y="-590"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="EGJ-Yj-8En">
+            <objects>
+                <viewController storyboardIdentifier="Video" id="CKg-eM-qPt" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qCm-eK-lIW"/>
+                        <viewControllerLayoutGuide type="bottom" id="nLc-Gc-qJr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fMq-Eg-1OX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NRq-oe-zZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3401" y="-591"/>
+        </scene>
+        <!--Rate View Controller-->
+        <scene sceneID="8IR-8b-OdG">
+            <objects>
+                <viewController storyboardIdentifier="Rate" id="gU9-7K-CJw" customClass="RateViewController" customModule="Gallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zqz-e8-rTf"/>
+                        <viewControllerLayoutGuide type="bottom" id="VFI-3f-IyD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ysn-5a-iUy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="HI6-A6-5dp">
+                                <rect key="frame" x="8" y="52" width="367" height="51"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URM-cc-2IC">
+                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="51"/>
+                                        <state key="normal" title="Button" image="GoldStarEmpty"/>
+                                        <connections>
+                                            <action selector="Btn1Click:" destination="gU9-7K-CJw" eventType="touchUpInside" id="56h-xa-IeU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQd-2S-Qcc">
+                                        <rect key="frame" x="73.5" y="0.0" width="73.5" height="51"/>
+                                        <state key="normal" title="Button" image="GoldStarEmpty"/>
+                                        <connections>
+                                            <action selector="Btn2Click:" destination="gU9-7K-CJw" eventType="touchUpInside" id="ftz-Fr-Qlo"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDD-tv-aj3">
+                                        <rect key="frame" x="147" y="0.0" width="73" height="51"/>
+                                        <state key="normal" title="Button" image="GoldStarEmpty"/>
+                                        <connections>
+                                            <action selector="Btn3Clicik:" destination="gU9-7K-CJw" eventType="touchUpInside" id="Gng-fe-1r0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mai-5I-FL5">
+                                        <rect key="frame" x="220" y="0.0" width="73.5" height="51"/>
+                                        <state key="normal" title="Button" image="GoldStarEmpty"/>
+                                        <connections>
+                                            <action selector="Btn4Click:" destination="gU9-7K-CJw" eventType="touchUpInside" id="8xM-9f-pEc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mwr-cy-nuf">
+                                        <rect key="frame" x="293.5" y="0.0" width="73.5" height="51"/>
+                                        <state key="normal" title="Button" image="GoldStarEmpty"/>
+                                        <connections>
+                                            <action selector="Btn5Click:" destination="gU9-7K-CJw" eventType="touchUpInside" id="XRa-nQ-gFU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ca-2U-s5F">
+                                <rect key="frame" x="329" y="119" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="1Lb-dL-fKY"/>
+                                    <constraint firstAttribute="height" constant="30" id="MBc-VF-wii"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="B53-Ov-w3u" userLabel="Txt">
+                                <rect key="frame" x="0.0" y="181" width="375" height="150"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.43487799657534248" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="N2r-Je-1gz"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9r-ef-CyT">
+                                <rect key="frame" x="0.0" y="381" width="187.5" height="42"/>
+                                <color key="backgroundColor" red="1" green="0.70471975440000001" blue="0.87949787469999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="CancelClick:" destination="gU9-7K-CJw" eventType="touchUpInside" id="5j7-eT-Jq3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aq0-yt-ywM">
+                                <rect key="frame" x="187.5" y="381" width="187.5" height="42"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="0.51781892123287676" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SendClick:" destination="gU9-7K-CJw" eventType="touchUpInside" id="M8D-T3-g9M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B53-Ov-w3u" firstAttribute="leading" secondItem="ysn-5a-iUy" secondAttribute="leading" id="12b-Od-l76"/>
+                            <constraint firstItem="HI6-A6-5dp" firstAttribute="top" secondItem="Zqz-e8-rTf" secondAttribute="bottom" constant="32" id="3wG-ff-hfv"/>
+                            <constraint firstItem="F9r-ef-CyT" firstAttribute="width" secondItem="B53-Ov-w3u" secondAttribute="width" multiplier="0.5" id="6Nb-6m-O5b"/>
+                            <constraint firstItem="B53-Ov-w3u" firstAttribute="top" secondItem="1ca-2U-s5F" secondAttribute="bottom" constant="32" id="Clk-gG-FWn"/>
+                            <constraint firstItem="Aq0-yt-ywM" firstAttribute="centerY" secondItem="F9r-ef-CyT" secondAttribute="centerY" id="DlZ-hy-WDr"/>
+                            <constraint firstItem="1ca-2U-s5F" firstAttribute="trailing" secondItem="ysn-5a-iUy" secondAttribute="trailing" constant="-16" id="H7o-lb-Pvn"/>
+                            <constraint firstItem="HI6-A6-5dp" firstAttribute="trailing" secondItem="ysn-5a-iUy" secondAttribute="trailing" id="IHH-g4-w5I"/>
+                            <constraint firstItem="HI6-A6-5dp" firstAttribute="leading" secondItem="ysn-5a-iUy" secondAttribute="leading" constant="8" id="M5X-hD-eMf"/>
+                            <constraint firstAttribute="trailing" secondItem="B53-Ov-w3u" secondAttribute="trailing" id="MPl-28-YT7"/>
+                            <constraint firstItem="F9r-ef-CyT" firstAttribute="leading" secondItem="B53-Ov-w3u" secondAttribute="leading" id="ZSk-Eb-yaD"/>
+                            <constraint firstItem="Aq0-yt-ywM" firstAttribute="width" secondItem="F9r-ef-CyT" secondAttribute="width" id="gNA-Iw-I7g"/>
+                            <constraint firstItem="F9r-ef-CyT" firstAttribute="top" secondItem="B53-Ov-w3u" secondAttribute="bottom" constant="50" id="slC-or-tOr"/>
+                            <constraint firstItem="Aq0-yt-ywM" firstAttribute="leading" secondItem="F9r-ef-CyT" secondAttribute="trailing" id="t9h-Bh-Byf"/>
+                            <constraint firstItem="1ca-2U-s5F" firstAttribute="top" secondItem="HI6-A6-5dp" secondAttribute="bottom" constant="16" id="wn3-8j-Cm2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="Btn1" destination="URM-cc-2IC" id="hOm-6s-fEU"/>
+                        <outlet property="Btn2" destination="cQd-2S-Qcc" id="xap-2O-PLO"/>
+                        <outlet property="Btn3" destination="UDD-tv-aj3" id="ToW-tv-Ihk"/>
+                        <outlet property="Btn4" destination="mai-5I-FL5" id="ob9-AN-CG8"/>
+                        <outlet property="Btn5" destination="Mwr-cy-nuf" id="00h-vX-aFl"/>
+                        <outlet property="Lbl" destination="1ca-2U-s5F" id="kbf-jb-MA4"/>
+                        <outlet property="Txt" destination="B53-Ov-w3u" id="OnT-eV-u68"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FFJ-HU-qH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4180" y="-591"/>
         </scene>
         <!--Item-->
         <scene sceneID="GYk-sa-4sa">
@@ -877,7 +1040,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVR-dU-hv5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="-648"/>
+            <point key="canvasLocation" x="1057" y="199"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="7mr-DU-p6h">
@@ -899,14 +1062,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JL6-qC-e9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="-1452"/>
+            <point key="canvasLocation" x="1057" y="-589"/>
         </scene>
     </scenes>
     <resources>
         <image name="00" width="32" height="32"/>
         <image name="05" width="225" height="225"/>
+        <image name="GoldStarEmpty" width="53" height="51"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="B5O-um-ntS"/>
+        <segue reference="7ca-ut-abc"/>
     </inferredMetricsTieBreakers>
 </document>
