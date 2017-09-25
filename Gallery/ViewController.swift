@@ -85,6 +85,16 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "MorningController"
+        {
+            let indexPaths = self.CollectionView.indexPathsForSelectedItems
+            let indexPath = indexPaths?[0] as! IndexPath
+            let vc = segue.destination as! ShowImageViewController
+            vc.img = UIImage(named: self.arr1[indexPath.row])
+        }
+    }
     
     // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize

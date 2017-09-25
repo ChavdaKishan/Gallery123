@@ -44,25 +44,4 @@ class GoodmorningViewController: UIViewController,UICollectionViewDelegate,UICol
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if segue.identifier == "MorningVC"
-        {
-            let indexPaths = self.CollectinView.indexPathsForSelectedItems
-            let indexPath = indexPaths?[0] as! IndexPath
-            let vc = segue.destination as! ShowImageViewController
-            vc.img = UIImage(named: self.arr1[indexPath.row])
-        }
-    }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }

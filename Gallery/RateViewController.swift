@@ -23,8 +23,6 @@ class RateViewController: UIViewController,MFMailComposeViewControllerDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     @IBAction func Btn1Click(_ sender: Any)
     {
@@ -82,24 +80,42 @@ class RateViewController: UIViewController,MFMailComposeViewControllerDelegate
         let back = storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
         self.navigationController?.pushViewController(back, animated: true)
     }
+    
     @IBAction func SendClick(_ sender: Any)
     {
-        
+        let mailComposeViewController = configureMailController()
+        if MFMailComposeViewController.canSendMail()
+        {
+            self.present(mailComposeViewController, animated: true, completion: nil)
+        }
+        else
+        {
+            showMailError()
+        }
     }
     
-    override func didReceiveMemoryWarning()
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?)
     {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        controller.dismiss(animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func configureMailController() -> MFMailComposeViewController
+    {
+        let mail = MFMailComposeViewController()
+        mail.mailComposeDelegate = self
+        
+        mail.setToRecipients(["chavdakish1996@gmail.com"])
+        mail.setSubject("Hello")
+        mail.setMessageBody("How are you doing?", isHTML: false)
+        
+        return mail
     }
-    */
+    
+    func showMailError()
+    {
+        let Alert = UIAlertController(title: "Could not send email", message: "Your device could not send email", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        Alert.addAction(ok)
+        self.present(Alert, animated: true, completion: nil)
+    }
 }
