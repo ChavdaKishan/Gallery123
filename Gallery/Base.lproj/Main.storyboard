@@ -37,7 +37,7 @@
                                         <rect key="frame" x="87.5" y="0.0" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="201" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ad8-rt-9jJ">
@@ -878,10 +878,10 @@
             </objects>
             <point key="canvasLocation" x="2622" y="-590"/>
         </scene>
-        <!--View Controller-->
+        <!--Video View Controller-->
         <scene sceneID="EGJ-Yj-8En">
             <objects>
-                <viewController storyboardIdentifier="Video" id="CKg-eM-qPt" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Video" id="CKg-eM-qPt" customClass="VideoViewController" customModule="Gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qCm-eK-lIW"/>
                         <viewControllerLayoutGuide type="bottom" id="nLc-Gc-qJr"/>
@@ -889,8 +889,37 @@
                     <view key="view" contentMode="scaleToFill" id="fMq-Eg-1OX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fuq-zO-gQ3">
+                                <rect key="frame" x="0.0" y="28" width="375" height="333.5"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pl-e0-uH2">
+                                <rect key="frame" x="94" y="393.5" width="187.5" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="0.51987906678082196" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="BackClick:" destination="CKg-eM-qPt" eventType="touchUpInside" id="mnO-oA-MWt"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fuq-zO-gQ3" firstAttribute="leading" secondItem="fMq-Eg-1OX" secondAttribute="leading" id="5jC-vp-SUs"/>
+                            <constraint firstItem="fuq-zO-gQ3" firstAttribute="top" secondItem="qCm-eK-lIW" secondAttribute="bottom" constant="8" id="6Ep-75-5Rb"/>
+                            <constraint firstItem="fuq-zO-gQ3" firstAttribute="height" secondItem="fMq-Eg-1OX" secondAttribute="height" multiplier="0.5" id="DdM-iX-fiC"/>
+                            <constraint firstItem="1pl-e0-uH2" firstAttribute="centerX" secondItem="fMq-Eg-1OX" secondAttribute="centerX" id="GXr-6C-Pr1"/>
+                            <constraint firstItem="1pl-e0-uH2" firstAttribute="width" secondItem="fMq-Eg-1OX" secondAttribute="width" multiplier="0.5" id="GaH-HK-DXQ"/>
+                            <constraint firstItem="1pl-e0-uH2" firstAttribute="top" secondItem="fuq-zO-gQ3" secondAttribute="bottom" constant="32" id="tfE-9d-8FU"/>
+                            <constraint firstItem="fuq-zO-gQ3" firstAttribute="trailing" secondItem="fMq-Eg-1OX" secondAttribute="trailing" id="yhM-qn-vFP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="WebView" destination="fuq-zO-gQ3" id="Xqi-5C-GZ5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NRq-oe-zZ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1071,6 +1100,6 @@
         <image name="GoldStarEmpty" width="53" height="51"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7ca-ut-abc"/>
+        <segue reference="kq4-eK-CeG"/>
     </inferredMetricsTieBreakers>
 </document>
