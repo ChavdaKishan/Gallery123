@@ -191,6 +191,8 @@
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="1qr-ud-XNq" appends="YES" id="XHi-FJ-Oi9"/>
+                                    <outletCollection property="gestureRecognizers" destination="XmJ-Y4-NIe" appends="YES" id="9wg-rC-Huw"/>
+                                    <outletCollection property="gestureRecognizers" destination="bDD-hl-Mh2" appends="YES" id="koQ-XT-BhK"/>
                                 </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPQ-Jc-IVu">
@@ -227,6 +229,16 @@
                         <action selector="TapGesture:" destination="Pvv-RF-R2o" id="Jlv-VE-VpM"/>
                     </connections>
                 </tapGestureRecognizer>
+                <pinchGestureRecognizer id="XmJ-Y4-NIe">
+                    <connections>
+                        <action selector="PinchGesture:" destination="Pvv-RF-R2o" id="1Db-D7-DsQ"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="bDD-hl-Mh2">
+                    <connections>
+                        <action selector="PanGesture:" destination="Pvv-RF-R2o" id="bgs-OS-CNd"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1057" y="1716"/>
         </scene>

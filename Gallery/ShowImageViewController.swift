@@ -29,6 +29,7 @@ class ShowImageViewController: UIViewController
         LikeBtn.isHidden = true
     }
     
+    // MARK : - Share Button
     @IBAction func Sharebtnclick(_ sender: Any)
     {
         let theButton = sender as! UIButton
@@ -54,6 +55,8 @@ class ShowImageViewController: UIViewController
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK : - Gesture
     @IBAction func TapGesture(_ sender: UITapGestureRecognizer)
     {
         if LikeBtn.isHidden == true
@@ -63,7 +66,23 @@ class ShowImageViewController: UIViewController
             Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(animation), userInfo: nil, repeats: false)
         }
     }
+    @IBAction func PinchGesture(_ sender: UIPinchGestureRecognizer)
+    {
+        if let view = sender.view
+        {
+            view.transform = view.transform.scaledBy(x: sender.scale, y: sender.scale)
+            sender.scale = 1.0
+        }
+    }
+    @IBAction func PanGesture(_ sender: UIPanGestureRecognizer)
+    {
+        let translate = sender.translation(in: view)
+        sender.setTranslation(.zero, in: view)
+        let image = sender.view as! UIImageView
+        image.center = CGPoint(x: image.center.x + translate.x, y: image.center.y + translate.y)
+    }
     
+    // MARK : - Animation Function
     func animation1()
     {
         LikeBtn.transform = CGAffineTransform(scaleX: 2, y: 2)
