@@ -11,6 +11,8 @@ import UIKit
 class ShowImageViewController: UIViewController
 {
     @IBOutlet weak var IMGShow: UIImageView!
+    @IBOutlet weak var LikeBtn: UIButton!
+    
     var img : UIImage? = nil
     
     override func viewDidLoad()
@@ -21,6 +23,10 @@ class ShowImageViewController: UIViewController
         {
             self.IMGShow.image = self.img
         }
+    }
+    override func viewWillAppear(_ animated: Bool)
+    {
+        LikeBtn.isHidden = true
     }
     
     @IBAction func Sharebtnclick(_ sender: Any)
@@ -47,6 +53,29 @@ class ShowImageViewController: UIViewController
     {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func TapGesture(_ sender: UITapGestureRecognizer)
+    {
+        if LikeBtn.isHidden == true
+        {
+            LikeBtn.isHidden = false
+            animation1()
+            Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(animation), userInfo: nil, repeats: false)
+        }
+    }
+    
+    func animation1()
+    {
+        LikeBtn.transform = CGAffineTransform(scaleX: 2, y: 2)
+        LikeBtn.alpha = 0
+        UIView.animate(withDuration: 0.3, animations: {
+            self.LikeBtn.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+            self.LikeBtn.alpha = 1
+        })
+    }
+    func animation()
+    {
+        LikeBtn.isHidden = true
     }
     
     /*

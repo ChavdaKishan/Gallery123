@@ -44,4 +44,15 @@ class GoodmorningViewController: UIViewController,UICollectionViewDelegate,UICol
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.identifier == "MorningVC"
+        {
+            let indexPaths = self.CollectinView.indexPathsForSelectedItems
+            let indexPath = indexPaths?[0] as! IndexPath
+            let vc = segue.destination as! ShowImageViewController
+            vc.img = UIImage(named: self.arr1[indexPath.row])
+        }
+    }
 }
