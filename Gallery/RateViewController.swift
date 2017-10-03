@@ -20,9 +20,12 @@ class RateViewController: UIViewController,MFMailComposeViewControllerDelegate
     @IBOutlet weak var Lbl: UILabel!
     @IBOutlet weak var Txt: UITextField!
     
+    var feedback = String()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        feedback = Txt.text!
     }
     @IBAction func Btn1Click(_ sender: Any)
     {
@@ -106,7 +109,7 @@ class RateViewController: UIViewController,MFMailComposeViewControllerDelegate
         
         mail.setToRecipients(["chavdakish1996@gmail.com"])
         mail.setSubject("Hello")
-        mail.setMessageBody("How are you doing?", isHTML: false)
+        mail.setMessageBody(feedback, isHTML: false)
         
         return mail
     }

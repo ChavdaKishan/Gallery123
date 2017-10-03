@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout
+class ViewController: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate//,UICollectionViewDelegateFlowLayout
 {
     @IBOutlet weak var MenuClick: UIBarButtonItem!
     @IBOutlet weak var CollectionView: UICollectionView!
@@ -84,13 +84,12 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
             performSegue(withIdentifier: "RangoliController", sender: self)
         }
     }
-        
-    // MARK: - UICollectionViewDelegateFlowLayout
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
-    {
-        return CGSize(width: (UIScreen.main.bounds.width-10)/2, height: (UIScreen.main.bounds.width-10)/2)
-    }
     
+    // MARK: - UICollectionViewDelegateFlowLayout
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+//    {
+//        return CGSize(width: (UIScreen.main.bounds.width-10)/2, height: (UIScreen.main.bounds.width-10)/2)
+//    }
     
     override func didReceiveMemoryWarning()
     {
