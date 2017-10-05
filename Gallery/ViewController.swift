@@ -14,7 +14,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     @IBOutlet weak var CollectionView: UICollectionView!
     
     // MARK: - Collection Variable
-    var arr : [String] = ["1","2","3","4","5","6","7","8","9","10"]
+    var arr : [String] = ["coffee","2","3","4","5","6","7","8","9","10"]
     var arr1 : [String] = ["Good Morning","Good Night","God","Couple","Baby","Car","Mahendi","Ship","Ring","Rangoli"]
     
     override func viewDidLoad()
