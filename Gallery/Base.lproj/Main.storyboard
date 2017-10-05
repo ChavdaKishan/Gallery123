@@ -40,9 +40,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ad8-rt-9jJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ad8-rt-9jJ">
+                                                    <rect key="frame" x="0.0" y="8" width="375" height="184"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BFm-WH-Z7Q">
@@ -54,6 +53,12 @@
                                                 </label>
                                             </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="ad8-rt-9jJ" firstAttribute="top" secondItem="LC3-Yh-6M2" secondAttribute="topMargin" id="RVO-Ru-DzO"/>
+                                            <constraint firstItem="ad8-rt-9jJ" firstAttribute="bottom" secondItem="LC3-Yh-6M2" secondAttribute="bottomMargin" id="hVC-V4-oVE"/>
+                                            <constraint firstItem="ad8-rt-9jJ" firstAttribute="leading" secondItem="LC3-Yh-6M2" secondAttribute="leading" id="lfM-od-70r"/>
+                                            <constraint firstItem="ad8-rt-9jJ" firstAttribute="trailing" secondItem="LC3-Yh-6M2" secondAttribute="trailing" id="mWy-rS-QjZ"/>
+                                        </constraints>
                                         <connections>
                                             <outlet property="Lbl" destination="BFm-WH-Z7Q" id="ZaI-Kr-oqM"/>
                                             <outlet property="MyImage" destination="ad8-rt-9jJ" id="mKb-ac-wYH"/>
@@ -94,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1828" y="198.35082458770617"/>
+            <point key="canvasLocation" x="1828" y="197"/>
         </scene>
         <!--Goodmorning View Controller-->
         <scene sceneID="Nhw-9g-jrs">
@@ -1097,7 +1102,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVR-dU-hv5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="199"/>
+            <point key="canvasLocation" x="1057" y="198"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="7mr-DU-p6h">

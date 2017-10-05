@@ -26,6 +26,14 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
             MenuClick.action = Selector("revealToggle:")
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        let cellSize = CGSize(width:405 , height:220)
+        let layout = UICollectionViewFlowLayout()
+//        layout.scrollDirection = .vertical //.horizontal
+        layout.itemSize = cellSize
+//        layout.sectionInset = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
+        layout.minimumLineSpacing = 1.0
+//        layout.minimumInteritemSpacing = 1.0
+        CollectionView.setCollectionViewLayout(layout, animated: true)
     }
     
     
@@ -88,7 +96,7 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
     // MARK: - UICollectionViewDelegateFlowLayout
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
 //    {
-//        return CGSize(width: (UIScreen.main.bounds.width-10)/2, height: (UIScreen.main.bounds.width-10)/2)
+//        return CGSize(width: (UIScreen.main.bounds.width), height: (UIScreen.main.bounds.height-10)/2)
 //    }
     
     override func didReceiveMemoryWarning()
