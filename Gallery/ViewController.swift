@@ -26,6 +26,8 @@ class ViewController: UIViewController,UICollectionViewDataSource,UICollectionVi
             MenuClick.action = Selector("revealToggle:")
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        // MARK : - set cellSize
         let cellSize = CGSize(width:405 , height:220)
         let layout = UICollectionViewFlowLayout()
 //        layout.scrollDirection = .vertical //.horizontal
